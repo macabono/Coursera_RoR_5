@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='TestDirectiveApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Test Directives</title>
+  </head>
+  <body>
+    <h1>Test Directives</h1>
+
+    <div id="list" ng-controller='TestListController as list'>
+      <p>{{list.items[1].val}} of {{list.items[1].name}}</p>
+      <my-test
+        items="list.items"></my-test>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,11 @@
+  <h3>{{ myTitle }}</h3>
+  <ul>
+    <li ng-repeat="item in found" class="row">
+      <div class="col-xs-1 col-sm-1">{{ item.short_name }}</div>
+      <div class="col-xs-4 col-sm-3">{{ item.name }}</div>
+      <div class="col-xs-7 col-sm-5">{{item.description}}</div>
+      <div class="col-xs-12 col-sm-3">
+	    <button ng-click="onRemove({index: $index});">Don't want this one</button>
+	  </div>
+	</li>
+  </ul>
