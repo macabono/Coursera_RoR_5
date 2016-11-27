@@ -56,7 +56,13 @@
           <br>
 
         <input type="text" name="short_name" placeholder="Your favorite dish menu number"
-          ng-model="formCtrl.user.short_name">
+          ng-model="formCtrl.user.short_name" required short-name-dir >
+           <span class="input-msg" ng-if="regForm.short_name.$pending.shortNameDir">
+            Checking if {{formCtrl.user.short_name}} menu item exist ... 
+          </span>
+          <span class="input-msg" ng-if="regForm.short_name.$error.shortNameDir">
+            No such menu item exists... 
+          </span>
           <span class="input-msg" ng-if="formCtrl.error">
             {{formCtrl.error}}
           </span>

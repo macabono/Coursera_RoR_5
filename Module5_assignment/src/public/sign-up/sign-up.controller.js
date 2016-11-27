@@ -25,7 +25,6 @@ function SignUpController(MenuService) {
       }
     });
   };
-
 }
 
 })();
